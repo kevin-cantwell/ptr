@@ -56,6 +56,6 @@ func main() {
     B: p.String("foo"),
     C: p.Float64(33.3),
   }
-  fmt.Println(stars)
+  fmt.Println(*stars.A, *stars.B, *stars.C)
 }
 ```
