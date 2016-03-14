@@ -6,6 +6,8 @@
 // The letter 'd' stands for deference
 package d
 
+import "time"
+
 // Predeclared Identifiers
 
 func Bool(b *bool) bool {
@@ -146,4 +148,13 @@ func Uintptr(n *uintptr) *uintptr {
 		return 0
 	}
 	return *n
+}
+
+// Standard types
+
+func Time(t *time.Time) time.Time {
+	if t == nil {
+		return time.Time{}
+	}
+	return *t
 }
