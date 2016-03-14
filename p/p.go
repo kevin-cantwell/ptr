@@ -7,9 +7,6 @@ package p
 
 import "time"
 
-// Given any value, return it's pointer
-func Ptr(v interface{}) interface{} { return &v }
-
 // Predeclared Identifiers
 
 func Bool(b bool) *bool                   { return &b }

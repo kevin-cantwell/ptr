@@ -122,28 +122,28 @@ func Uint8(n *uint8) uint8 {
 	return *n
 }
 
-func Uint16(n *uint16) *uint16 {
+func Uint16(n *uint16) uint16 {
 	if n == nil {
 		return 0
 	}
 	return *n
 }
 
-func Uint32(n *uint32) *uint32 {
+func Uint32(n *uint32) uint32 {
 	if n == nil {
 		return 0
 	}
 	return *n
 }
 
-func Uint64(n *uint64) *uint64 {
+func Uint64(n *uint64) uint64 {
 	if n == nil {
 		return 0
 	}
 	return *n
 }
 
-func Uintptr(n *uintptr) *uintptr {
+func Uintptr(n *uintptr) uintptr {
 	if n == nil {
 		return 0
 	}
