@@ -1,9 +1,15 @@
+// Package p returns pointers of built in types. This is useful
+// when it's not possible to take the address of an expression, such as
+// a string literal or function call.
+//
+// The letter 'p' stands for pointer.
 package p
 
 // Given any value, return it's pointer
 func Ptr(v interface{}) interface{} { return &v }
 
 // Predeclared Identifiers
+
 func Bool(b bool) *bool                   { return &b }
 func Byte(b byte) *byte                   { return &b }
 func Complex64(c complex64) *complex64    { return &c }
