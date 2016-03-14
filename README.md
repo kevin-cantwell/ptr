@@ -42,12 +42,21 @@ This package takes the last approach and makes it available as helper functions.
 ```go
 package main
 
-import "github.com/kevin-cantwell/p"
+import (
+  "github.com/kevin-cantwell/ptr/p"
+  "github.com/kevin-cantwell/ptr/d"
+)
 
 type MyGodItsFullOfStars struct {
   A *int
   B *string
   C *float64
+}
+
+type ZeroValsOnly struct {
+  A int
+  B string
+  C float64
 }
 
 func main() {
@@ -56,6 +65,13 @@ func main() {
     B: p.String("foo"),
     C: p.Float64(33.3),
   }
-  fmt.Println(*stars.A, *stars.B, *stars.C)
+  fmt.Printf("%d %q %f\n", *stars.A, *stars.B, *stars.C) // 123 "foo" 33.3
+
+  zeroes := ZeroValsOnly{
+    A: d.Int(stars.A),
+    B: d.String(stars.B),
+    C: d.Float64(stars.C),
+  }
+  fmt.Printf("%d %q %f\n", zeroes.A, zeroes.B, zeroes.C) // 123 "foo" 33.3
 }
 ```
