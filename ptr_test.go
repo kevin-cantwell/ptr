@@ -32,3 +32,10 @@ func TestPtr(t *testing.T) {
 		})
 	}
 }
+
+func TestPtrLiteral(t *testing.T) {
+	var foo *string = ptr.P("bar")
+	if *foo != "bar" {
+		t.FailNow()
+	}
+}
