@@ -10,4 +10,6 @@ fmt.Printf("Deref value of *p: %v\n", ptr.V(&p))
 var i *int64 = nil
 fmt.Printf("Pointer value of i: %v\n", ptr.P(i))
 fmt.Printf("Pointer value of *i: %v\n", ptr.V(&i))
+
+var foo *string = ptr.P("bar")
 ```
